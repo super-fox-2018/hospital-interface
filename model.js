@@ -6,8 +6,33 @@ class Patient {
     this.diagnosis = diagnosis
   }
 
-  addPatient(){
-    
+  addPatient(obj, callback){
+    Patient.readPatient(function(data){
+      data.push(obj)
+      let arrJson = JSON.stringify(data, null, 2);
+      Patient.write(arrJson)
+      callback(data)
+    })
+  }
+
+  static write(arr){
+    fs.writeFile('patient.json', arr, (err) => {
+      if (err) throw err;
+    })
+  }
+
+  static readEmployee(callback){
+    fs.readFile('employee.json','utf8', (err, data) =>{
+      if (err) throw err;
+      callback(JSON.parse(data))
+    })    
+  }
+
+  static readPatient(callback){
+    fs.readFile('patient.json','utf8', (err, data) =>{
+      if (err) throw err;
+      callback(JSON.parse(data))
+    })
   }
 }
 

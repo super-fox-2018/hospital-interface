@@ -25,13 +25,13 @@
     "position": "satpam",
     "username": "thanos",
     "password": "3333",
-    "isLogin": true
+    "isLogin": false
   },
   {
     "name": "ironman",
     "position": "dokter",
     "username": "ironman",
     "password": "3333",
-    "isLogin": false
+    "isLogin": true
   }
 ]
