@@ -1,0 +1,32 @@
+[
+  {
+    "username": "handi",
+    "password": "101010",
+    "role": "dokter",
+    "islogin": true
+  },
+  {
+    "username": "susi",
+    "password": "191919",
+    "role": "karyawan",
+    "islogin": false
+  },
+  {
+    "username": "bella",
+    "password": "10000",
+    "role": "karyawan",
+    "islogin": false
+  },
+  {
+    "username": "Bursaham",
+    "password": "181818",
+    "role": "karyawan",
+    "islogin": false
+  },
+  {
+    "username": "ss",
+    "password": "s988s",
+    "role": "sss",
+    "islogin": false
+  }
+]
