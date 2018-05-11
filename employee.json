@@ -1,0 +1,34 @@
+[
+  {
+    "name": "andrew",
+    "position": "doctor",
+    "username": "dragonborn32",
+    "password": "12345",
+    "id": 1,
+    "login": false
+  },
+  {
+    "name": "emon",
+    "position": "nurse",
+    "username": "forthewin",
+    "password": "123",
+    "id": 2,
+    "login": false
+  },
+  {
+    "name": "rogut",
+    "position": "doctor",
+    "username": "funlho",
+    "password": "1234",
+    "id": 3,
+    "login": false
+  },
+  {
+    "name": "maliken",
+    "position": "security",
+    "username": "astagadragon",
+    "password": "000",
+    "id": 4,
+    "login": false
+  }
+]
