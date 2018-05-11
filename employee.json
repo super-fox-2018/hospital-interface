@@ -1,0 +1,38 @@
+[
+  {
+    "username": "Olla",
+    "position": "dokter",
+    "password": "Rahasia123!",
+    "status": true
+  },
+  {
+    "username": "Robbyn",
+    "position": "dokter",
+    "password": "asdfg",
+    "status": false
+  },
+  {
+    "username": "myUsername",
+    "position": "myPosition",
+    "password": "myPassword",
+    "status": false
+  },
+  {
+    "username": "Paije",
+    "position": "nurse",
+    "password": "12345",
+    "status": false
+  },
+  {
+    "username": "Paije",
+    "position": "nurse",
+    "password": "Xendit",
+    "status": false
+  },
+  {
+    "username": "Paije",
+    "position": "nurse",
+    "password": "Rahasia123!",
+    "status": false
+  }
+]
