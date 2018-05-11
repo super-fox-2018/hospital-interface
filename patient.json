@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1",
+    "name": "Adrian",
+    "symptoms": [
+      "headache",
+      "cough",
+      "runny_nose"
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Adrian",
+    "symptoms": [
+      "headache",
+      "cough",
+      "runny_nose"
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Bobby",
+    "symptoms": [
+      "headache",
+      "cough",
+      "heartache"
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Jordan",
+    "symptoms": [
+      "highblood_pressure",
+      "stress"
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Bryan",
+    "symptoms": [
+      "insomnia",
+      "depression"
+    ]
+  },
+  {
+    "id": "6",
+    "name": "Grant",
+    "symptoms": [
+      "caffeine_addict"
+    ]
+  }
+]
