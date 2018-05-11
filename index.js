@@ -10,7 +10,6 @@ function processInput(input) {
   }
 
   route(action, argumentList);
-  // console.log(inputList)
 }
 
 function route(action, argumentList) {

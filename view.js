@@ -1,8 +1,15 @@
 class View {
-  static displayRegister(obj) {
+  static displayRegister(obj, len) {
+    let jsonFormat = JSON.stringify(obj);
     console.log(`save data success`);
-    console.log(obj.data[obj.total - 1]);
-    console.log(`Total employee: ${obj.total}`);
+    console.log(`${jsonFormat}`);
+    console.log(`Total employee: ${len}`)
+  }
+
+  static displayLogin(obj) {
+    console.log(`user ${obj.username} logged in successfully`);
+
+    console.log(`username / password is wrong`);
   }
 }
 
