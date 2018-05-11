@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "name": "ace",
+    "diagnosis": [
+      "2nd_degree_burn"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "zoro",
+    "diagnosis": [
+      "several_cuts",
+      "broken_bones"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "jinbei",
+    "diagnosis": [
+      "drowning"
+    ]
+  }
+]

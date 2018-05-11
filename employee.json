@@ -1,0 +1,16 @@
+[
+  {
+    "name": "nami",
+    "position": "admin",
+    "username": "weather",
+    "password": "nami1234",
+    "isLoggedIn": false
+  },
+  {
+    "name": "chopper",
+    "position": "dokter",
+    "username": "reindeer",
+    "password": "chopper1234",
+    "isLoggedIn": true
+  }
+]
