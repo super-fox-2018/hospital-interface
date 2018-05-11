@@ -1,0 +1,37 @@
+[
+  {
+    "name": "cuplis",
+    "position": "dokter",
+    "username": "cuplis",
+    "password": "3333",
+    "isLogin": false
+  },
+  {
+    "name": "budi",
+    "position": "dokter",
+    "username": "budi",
+    "password": "3333",
+    "isLogin": false
+  },
+  {
+    "name": "malcom",
+    "position": "dokter",
+    "username": "malcom",
+    "password": "3333",
+    "isLogin": false
+  },
+  {
+    "name": "thanos",
+    "position": "satpam",
+    "username": "thanos",
+    "password": "3333",
+    "isLogin": true
+  },
+  {
+    "name": "ironman",
+    "position": "dokter",
+    "username": "ironman",
+    "password": "3333",
+    "isLogin": false
+  }
+]
