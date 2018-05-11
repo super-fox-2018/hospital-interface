@@ -10,7 +10,8 @@ class Patient {
   static readData(cb) {
     fs.readFile('patient.json', 'utf8', (err, data) => {
       if (err) throw err;
-      const patients = JSON.parse(data);
+      const temp = JSON.parse(data);
+      const patients = temp.map(obj => new Patient(obj));
       cb(patients);
     });
   }

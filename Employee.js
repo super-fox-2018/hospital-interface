@@ -5,13 +5,14 @@ class Employee {
     this.username = props.username;
     this.password = props.password;
     this.position = props.position;
-    this.isLoggedIn = false;
+    this.isLoggedIn = props.isLoggedIn || false;
   }
 
   static readData(cb) {
     fs.readFile('employee.json', 'utf8', (err, data) => {
       if (err) throw err;
-      const employees = JSON.parse(data);
+      const temp = JSON.parse(data);
+      const employees = temp.map(props => new Employee(props));
       cb(employees);
     });
   }
@@ -42,8 +43,18 @@ class Employee {
     return null;
   }
 
+  static checkLoggedInUser(employees) {
+    for (let i = 0; i < employees.length; i += 1) {
+      const employee = employees[i];
+      if (employee.isLoggedIn) return employee;
+    }
+    return null;
+  }
+
   static login(username, password, cb) {
     this.readData(employees => {
+      const currentlyLoggedInUser = this.checkLoggedInUser(employees);
+      if (currentlyLoggedInUser) currentlyLoggedInUser.isLoggedIn = false;
       const user = this.searchUser(employees, username);
       if (user && user.password === password) {
         user.isLoggedIn = true;
@@ -59,6 +70,7 @@ class Employee {
     this.readData(employees => {
       for (let i = 0; i < employees.length; i += 1) {
         const employee = employees[i];
+        console.log(employee);
         if (employee.position === 'dokter' && employee.isLoggedIn) {
           cb(true);
           return;
