@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Jane",
+    "username": "jShepard",
+    "password": "sniper4lyf!",
+    "position": "doctor",
+    "loginStatus": false
+  },
+  {
+    "name": "Garrus",
+    "username": "gVakarian",
+    "password": "sniperisBest!",
+    "position": "employee",
+    "loginStatus": false
+  },
+  {
+    "name": "London",
+    "username": "lonCavalier",
+    "password": "dondongoodboy123",
+    "position": "employee",
+    "loginStatus": false
+  }
+]
