@@ -1,5 +1,5 @@
-const EmployeeFeature = require("./model.js")
-const View = require("./view.js")
+const EmployeeFeature = require("../Model/model.js")
+const View = require("../View/view.js")
 
 class Controller {
 

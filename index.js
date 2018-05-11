@@ -6,7 +6,7 @@ let number = argv[3]
 let patientName = argv[4]
 let diagnosis = argv.slice(5)
 let role = argv[5]
-const Controller = require("./controller.js")
+const Controller = require("./Controller/controller.js")
 
 switch (command) {
 	case "register":
