@@ -1,0 +1,16 @@
+[
+  {
+    "name": "naruto",
+    "position": "internis",
+    "username": "docter1",
+    "password": "uzumakinaruto",
+    "isLoggedIn": true
+  },
+  {
+    "name": "conan",
+    "position": "psikiater",
+    "username": "docter2",
+    "password": "detectiveconan",
+    "isLoggedIn": true
+  }
+]
