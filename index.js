@@ -9,3 +9,7 @@ if (command[0]==='register') {
 if (command[0]==='login') {
 	controller.login(command.slice(1))
 }
+if (command[0]==='addPatient') {
+	controller.addPatient(command[1],command.slice(2).join(' '))
+	//console.log(command.slice(2))
+}

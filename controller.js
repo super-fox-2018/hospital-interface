@@ -6,12 +6,20 @@ class Controller{
 
 	}
 	static register(employeeAttributes){
-		EmployeeModel.register(employeeAttributes)
-		view.register(employeeAttributes)
+		let data = EmployeeModel.register(employeeAttributes,(data,err)=>{
+			view.register(data)
+		})
+		
 	}
 	static login(employeeAttributes){
-		EmployeeModel.login(employeeAttributes)
-		view.login(employeeAttributes)
+		let data = EmployeeModel.login(employeeAttributes,(data,err)=>{
+			view.login(data)
+		})
+	}
+	static addPatient(namePatient,diagnosis){
+		let data = EmployeeModel.addPatient(namePatient,diagnosis,(data,err)=>{
+			view.addPatient(data)
+		})
 	}
 }
 module.exports = Controller
