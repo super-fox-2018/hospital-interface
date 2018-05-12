@@ -2,6 +2,14 @@ class View{
 	constructor(){
 
 	}
+	static help(){
+		console.log('Welcome to Hospital Apps')
+		console.log('help')
+		console.log('register <username> <password> <role>')
+		console.log('login <username> <password>')
+		console.log('addPatient <name> <diagnosis>')
+		console.log('logout <username>')
+	}
 	static register(dataEmployee){
 		console.log(`Kamu berhasil register ${dataEmployee[dataEmployee.length-1].username} 
 			total Employee ${dataEmployee.length}`)
@@ -20,6 +28,14 @@ class View{
 		}
 		else{
 			console.log('tidak memiliki akses')
+		}
+	}
+	static logout(user){
+		if (user!==undefined) {
+			console.log(`${user} berhasil logout`)
+		}
+		else{
+			console.log('anda belom login')
 		}
 	}
 }

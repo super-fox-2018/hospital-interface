@@ -91,6 +91,28 @@ class EmployeeModel{
 			})
 		})
 	}
+	static logout(user,cb){
+		this.readFile('./employee.json',(dataEmployee)=>{
+			let counter = 1
+			let employee = ''
+			for(var i=0;i<dataEmployee.length;i++){
+				if (dataEmployee[i].isLogin===true) {
+					dataEmployee[i].isLogin=false
+					employee = dataEmployee[i].username
+					counter = 0
+				}
+			}
+			if (counter===0) {
+				cb(employee)
+			}
+			else{
+				cb(undefined)
+			}
+			fs.writeFile('./employee.json',JSON.stringify(dataEmployee),(err)=>{
+				if (err) {throw err}
+			})
+		})
+	}
 }
 
 module.exports = EmployeeModel
