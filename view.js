@@ -8,23 +8,15 @@ class View {
     console.log(`sucessfully register ${JSON.stringify(person, null, 2)}. total employee = ${total}`);
   }
 
-  displayLogin(username, boolean) {
-    if (boolean) {
-      console.log(`user ${username} logged in sucessfully`);
-    } else {
-      console.log('username or password is wrong');
-    }
+  displayLogin(username) {
+    console.log(`user ${username} logged in sucessfully`);
   }
 
-  displayAddPatient(boolean) {
-    if (boolean) {
-      console.log('data pasien berhasil ditambah');
-    } else {
-      console.log('tidak memiliki akses untuk add pasien');
-    }
+  displayAddPatient(totalPatient) {
+    console.log(`data pasien berhasil ditambah. jumlah pasien sekarang: ${totalPatient}`);
   }
 
-  display(string) {
+  displayText(string) {
     console.log(string);
   }
 }

@@ -53,7 +53,7 @@ class Model {
 
   checkPassword(username, password, callback) {
     let model = this;
-    this.readEmployee(function(err, data) {
+    model.readEmployee(function(err, data) {
       let employeeList = data;
       let isTrue = false;
       for (let i = 0; i < employeeList.length; i++) {
@@ -62,13 +62,12 @@ class Model {
           employee.isLoggedIn = true;
           isTrue = true;
           model.writeEmployee(employeeList, function() {
-            callback(username, true);
+            callback(true);
+            return;
           });
         }
       }
-      if (!isTrue) {
-        callback(username, false);
-      }
+      callback(false);
     });
   }
 
@@ -86,34 +85,36 @@ class Model {
 
   addPatient(name, diagnosis, callback) {
     let model = this;
+    model.readPatient(function(err, data) {
+      let patientList = data;
+      let newId;
+      if (patientList.length > 0) {
+        let lastPatient = patientList[patientList.length - 1];
+        newId = lastPatient.id + 1;
+      } else {
+        newId = 1;
+      }
+      patientList.push(new Patient(newId, name, diagnosis));
+      model.writePatient(patientList, function() {
+        callback(patientList.length);
+      });
+    });
+  }
+
+  checkDoctor(callback) {
+    let model = this;
     let notDoctor = true;
-    this.readEmployee(function(err, data) {
+    model.readEmployee(function(err, data) {
       let employeeList = data;
       for (let i = 0; i < employeeList.length; i++) {
         let employee = employeeList[i];
         if (employee.position === 'dokter' && employee.isLoggedIn) {
-          notDoctor = false;
-          model.readPatient(function(err, data) {
-            let patientList = data;
-            let newId;
-            if (patientList.length > 0) {
-              let lastPatient = patientList[patientList.length - 1];
-              newId = lastPatient.id + 1;
-            } else {
-              newId = 1;
-            }
-            patientList.push(new Patient(newId, name, diagnosis));
-            model.writePatient(patientList, function() {
-              callback(true);
-            });
-          });
+          callback(true);
+          return;
         }
       }
-      if (notDoctor) {
-        callback(false);
-      }
+      callback(false);
     });
-    return notDoctor;
   }
 }
 

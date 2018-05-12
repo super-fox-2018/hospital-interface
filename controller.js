@@ -10,11 +10,23 @@ class Controller {
   }
 
   loginEmployee(username, password) {
-    model.checkPassword(username, password, view.displayLogin);
+    model.checkPassword(username, password, isSuccessful => {
+      if (isSuccessful) {
+        view.displayLogin(username);
+      } else {
+        view.displayText('username or password is wrong');
+      }
+    });
   }
 
   addPatient(name, diagnosis) {
-    model.addPatient(name, diagnosis, view.displayAddPatient);
+    model.checkDoctor(isDoctor => {
+      if (isDoctor) {
+        model.addPatient(name, diagnosis, view.displayAddPatient);
+      } else {
+        view.displayText('tidak memiliki akses buat add patient');
+      }
+    });
   }
 }
 
